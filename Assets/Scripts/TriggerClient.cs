@@ -16,7 +16,6 @@ namespace nb2255
             {
                 nd = FindObjectOfType<NetworkDiscovery>();
             }
-            nd.Initialize();
         }
 
         public override string GetName()
@@ -26,7 +25,10 @@ namespace nb2255
 
         public override void Toggle()
         {
+            nd.Initialize();
             nd.StartAsClient();
+            Debug.Log("Is running as client?: " + nd.isClient);
+            Debug.Log("Listenning on port: " + nd.broadcastPort);
             closeMenu();
         }
 

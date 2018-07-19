@@ -21,7 +21,6 @@ namespace nb2255
             {
                 nm = FindObjectOfType<NetworkManager>();
             }
-            nd.Initialize();
         }
 
         public override string GetName()
@@ -31,8 +30,12 @@ namespace nb2255
 
         public override void Toggle()
         {
+            nd.Initialize();
             nm.StartHost();
+            nd.broadcastData = nm.networkPort.ToString();
             nd.StartAsServer();
+            Debug.Log("Is running as server?: " + nd.isServer);
+            Debug.Log("Broadcasting on port: " + nd.broadcastPort);
             closeMenu();
         }
 
