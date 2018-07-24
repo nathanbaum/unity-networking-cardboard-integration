@@ -23,6 +23,7 @@ namespace nb2255
             camera.transform.position = transform.position;
             transform.rotation = Camera.main.transform.rotation;
             camera.transform.Translate(new Vector3(0f, .6f, 0));
+            
 
             var x = Input.GetMouseButton(0) ? Time.deltaTime * 3.0f : 0;
 

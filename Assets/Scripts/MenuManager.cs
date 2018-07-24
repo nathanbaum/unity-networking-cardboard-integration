@@ -51,7 +51,7 @@ namespace nb2255 {
                 //Debug.Log("Inside menu instantiation");
                 menuOpen = true;
                 Canvas newMenu = Instantiate(menu, transform);
-                newMenu.transform.position = Camera.main.transform.position + Vector3.back*3 + Vector3.down*1;
+                newMenu.transform.position = Camera.main.transform.position + Vector3.forward*4 + Vector3.down*1;
                 //Debug.Log("instantiated new menu: " + newMenu);
                 for (int i = 0; i < triggers.Count; i++)
                 {
